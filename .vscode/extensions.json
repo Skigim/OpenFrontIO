@@ -1,0 +1,42 @@
+{
+  "recommendations": [
+    // Core Development
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+
+    // Testing & Debugging
+    "orta.vscode-jest",
+    "usernamehw.errorlens",
+
+    // Git & Version Control
+    "eamodio.gitlens",
+
+    // Productivity
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "formulahendry.auto-rename-tag",
+
+    // API Testing
+    "rangav.vscode-thunder-client",
+
+    // Web Development
+    "ritwickdey.liveserver",
+
+    // UI Enhancement
+    "pkief.material-icon-theme",
+
+    // Game Development Specific
+    "ms-vscode.hexeditor",
+    "redhat.vscode-yaml",
+
+    // Markdown & Documentation
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint"
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-json",
+    "coenraads.bracket-pair-colorizer-2"
+  ]
+}

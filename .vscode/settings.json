@@ -1,0 +1,98 @@
+{
+  // Editor Settings
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [100],
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+
+  // TypeScript Settings
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.format.semicolons": "insert",
+
+  // ESLint Settings
+  "eslint.format.enable": true,
+  "eslint.validate": ["typescript", "javascript"],
+  "eslint.workingDirectories": ["src"],
+
+  // Prettier Settings
+  "prettier.requireConfig": false,
+  "prettier.useEditorConfig": false,
+
+  // Jest Settings
+  "jest.jestCommandLine": "npm test",
+  "jest.runMode": "watch",
+
+  // File Settings
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+
+  // Search Settings
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true,
+    "**/coverage": true
+  },
+
+  // Git Settings
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // Terminal Settings
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontSize": 14,
+
+  // Workbench Settings
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.editor.enablePreview": false,
+
+  // Error Lens Settings
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+  "errorLens.fontSize": "12px",
+
+  // Emmet Settings
+  "emmet.includeLanguages": {
+    "typescript": "html"
+  },
+
+  // Auto Save
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // HTML/CSS Settings for game UI
+  "html.format.indentInnerHtml": true,
+  "css.validate": true,
+
+  // Tailwind CSS Settings
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "html": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["class:\\s*['\"`]([^'\"`]*)['\"`]", "['\"`]([^'\"`]*)['\"`]"]
+  ]
+}

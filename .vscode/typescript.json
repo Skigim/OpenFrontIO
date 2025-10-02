@@ -1,0 +1,138 @@
+{
+  "Jest Test Suite": {
+    "prefix": "jesttest",
+    "body": [
+      "import { describe, it, expect, beforeEach, afterEach } from '@jest/globals';",
+      "",
+      "describe('${1:TestSuite}', () => {",
+      "  beforeEach(() => {",
+      "    ${2:// Setup}",
+      "  });",
+      "",
+      "  afterEach(() => {",
+      "    ${3:// Cleanup}",
+      "  });",
+      "",
+      "  it('${4:should do something}', () => {",
+      "    ${5:// Arrange}",
+      "    ",
+      "    ${6:// Act}",
+      "    ",
+      "    ${7:// Assert}",
+      "    expect(${8:actual}).${9:toBe}(${10:expected});",
+      "  });",
+      "});"
+    ],
+    "description": "Create a Jest test suite with setup and teardown"
+  },
+  "Game Entity Class": {
+    "prefix": "gameentity",
+    "body": [
+      "export class ${1:EntityName} {",
+      "  public readonly id: string;",
+      "  public position: { x: number; y: number };",
+      "",
+      "  constructor(",
+      "    id: string,",
+      "    position: { x: number; y: number }${2:,}",
+      "    ${3:// Additional properties}",
+      "  ) {",
+      "    this.id = id;",
+      "    this.position = position;",
+      "    ${4:// Initialize additional properties}",
+      "  }",
+      "",
+      "  public update(deltaTime: number): void {",
+      "    ${5:// Update logic}",
+      "  }",
+      "",
+      "  public render(context: CanvasRenderingContext2D): void {",
+      "    ${6:// Render logic}",
+      "  }",
+      "}"
+    ],
+    "description": "Create a basic game entity class"
+  },
+  "Event Handler": {
+    "prefix": "eventhandler",
+    "body": [
+      "public on${1:Event}(${2:data}: ${3:EventData}): void {",
+      "  ${4:// Handle event}",
+      "}"
+    ],
+    "description": "Create an event handler method"
+  },
+  "Game State Interface": {
+    "prefix": "gamestate",
+    "body": [
+      "export interface ${1:GameState} {",
+      "  readonly ${2:property}: ${3:type};",
+      "  ${4:// Additional properties}",
+      "}",
+      "",
+      "export const initial${1:GameState}: ${1:GameState} = {",
+      "  ${2:property}: ${5:initialValue},",
+      "  ${6:// Additional initial values}",
+      "};"
+    ],
+    "description": "Create a game state interface with initial state"
+  },
+  "WebSocket Message Handler": {
+    "prefix": "wsmessage",
+    "body": [
+      "private handle${1:MessageType}(message: ${2:MessageType}): void {",
+      "  try {",
+      "    ${3:// Process message}",
+      "    ",
+      "    ${4:// Send response if needed}",
+      "  } catch (error) {",
+      "    console.error('Error handling ${1:MessageType}:', error);",
+      "  }",
+      "}"
+    ],
+    "description": "Create a WebSocket message handler"
+  },
+  "Performance Timer": {
+    "prefix": "perf",
+    "body": [
+      "const ${1:timerName}Start = performance.now();",
+      "${2:// Code to measure}",
+      "const ${1:timerName}End = performance.now();",
+      "console.log(`${3:Operation} took ${${1:timerName}End - ${1:timerName}Start} milliseconds`);"
+    ],
+    "description": "Add performance timing around code"
+  },
+  "Game Component": {
+    "prefix": "component",
+    "body": [
+      "export class ${1:Component} {",
+      "  public readonly entity: ${2:Entity};",
+      "",
+      "  constructor(entity: ${2:Entity}) {",
+      "    this.entity = entity;",
+      "  }",
+      "",
+      "  public update(deltaTime: number): void {",
+      "    ${3:// Component update logic}",
+      "  }",
+      "",
+      "  public destroy(): void {",
+      "    ${4:// Cleanup logic}",
+      "  }",
+      "}"
+    ],
+    "description": "Create a game component class"
+  },
+  "Async Error Handler": {
+    "prefix": "asyncerror",
+    "body": [
+      "try {",
+      "  ${1:await asyncOperation();}",
+      "} catch (error) {",
+      "  console.error('${2:Operation failed}:', error);",
+      "  ${3:// Handle error}",
+      "}"
+    ],
+    "description": "Add async error handling"
+  }
+}

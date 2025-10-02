@@ -2,32 +2,87 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "🧪 Debug Jest Tests",
       "type": "node",
       "request": "launch",
-      "name": "Debug Jest Tests",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run-script", "test"],
       "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen"
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "test"
+      }
     },
     {
+      "name": "🎮 Debug Game Server",
       "type": "node",
       "request": "launch",
-      "name": "Debug Server",
-      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/src/server/Server.ts",
       "runtimeArgs": [
         "--loader",
         "ts-node/esm",
-        "--experimental-specifier-resolution=node",
-        "${workspaceFolder}/src/server/Server.ts"
+        "--experimental-specifier-resolution=node"
       ],
       "env": {
+        "NODE_ENV": "development",
         "GAME_ENV": "dev"
       },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
       "sourceMaps": true,
       "restart": true
+    },
+    {
+      "name": "🌐 Debug Client (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}/src/client",
+      "sourceMaps": true,
+      "trace": true,
+      "userDataDir": false,
+      "runtimeArgs": [
+        "--disable-web-security",
+        "--disable-features=VizDisplayCompositor"
+      ]
+    },
+    {
+      "name": "🧪 Debug Current Test File",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": ["${relativeFile}", "--runInBand", "--no-coverage", "--no-cache"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "test"
+      },
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
+    },
+    {
+      "name": "🎯 Attach to Node Process",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "${workspaceFolder}",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "🚀 Debug Full Game (Server + Client)",
+      "configurations": ["🎮 Debug Game Server", "🌐 Debug Client (Chrome)"],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 1
+      }
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "OpenFrontIO",
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.vscode-typescript-next",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "orta.vscode-jest",
+      "eamodio.gitlens",
+      "usernamehw.errorlens",
+      "bradlc.vscode-tailwindcss",
+    ],
+  },
+  "tasks": {
+    "version": "2.0.0",
+  },
+  "launch": {
+    "version": "0.2.0",
+  },
+}

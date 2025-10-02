@@ -14,14 +14,14 @@
     "perf": "npx tsx tests/perf/*.ts",
     "test:coverage": "jest --coverage",
     "format": "prettier --ignore-unknown --write .",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
     "prepare": "husky",
     "gen-maps": "cd map-generator && go run . && npm run format"
   },
   "lint-staged": {
     "**/*": [
-      "eslint --fix",
+      "npx eslint . --fix",
       "prettier --ignore-unknown --write"
     ]
   },
